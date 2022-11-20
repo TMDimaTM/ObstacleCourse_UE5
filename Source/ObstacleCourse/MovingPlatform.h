@@ -24,10 +24,23 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 private:
-	// Test variables
-	UPROPERTY(EditAnywhere, Category="Moving Platform")
-	FVector PlatformVelocity = FVector(100, 0, 0);
 
+	UPROPERTY(EditAnywhere, Category="Moving")
+	FVector MoveVelocity = FVector(100, 0, 0);
+
+	UPROPERTY(EditAnywhere, Category="Moving")
+	float MoveDistance = 250;
+
+	UPROPERTY(EditAnywhere, Category="Rotation")
+	FRotator RotationVelocity = FRotator(0, 180, 0);
+
+	FVector StartLocation;
 	FVector CurrentLocation;
+
+	void MovePlatform(float DeltaTime);
+	void RotatePlatform(float DeltaTime);
+
+	float GetDistanceMoved() const;
+	bool ShouldReturnPlatform() const;
 
 };
