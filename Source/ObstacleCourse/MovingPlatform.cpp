@@ -8,6 +8,11 @@ AMovingPlatform::AMovingPlatform()
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
+
+	MoveVelocity = FVector(100.0f, 0.0f, 0.0f);
+	MoveDistance = 250.0f;
+
+	RotationVelocity = FRotator(0.0f, 180.0f, 0.0f);
 }
 
 // Called when the game starts or when spawned

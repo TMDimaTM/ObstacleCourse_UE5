@@ -26,13 +26,13 @@ public:
 private:
 
 	UPROPERTY(EditAnywhere, Category="Moving")
-	FVector MoveVelocity = FVector(100.0f, 0.0f, 0.0f);
+	FVector MoveVelocity;
 
 	UPROPERTY(EditAnywhere, Category="Moving")
-	float MoveDistance = 250.0f;
+	float MoveDistance;
 
 	UPROPERTY(EditAnywhere, Category="Rotation")
-	FRotator RotationVelocity = FRotator(0.0f, 180.0f, 0.0f);
+	FRotator RotationVelocity;
 
 	FVector StartLocation;
 	FVector CurrentLocation;
